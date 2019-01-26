@@ -5,8 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class CameraController : MonoBehaviour
 {
-	[SerializeField]
-	private Vector2 m_velocity;
+	public Vector2 m_velocity;
 
 	private void Update() {
 		transform.Translate(m_velocity*Time.deltaTime);

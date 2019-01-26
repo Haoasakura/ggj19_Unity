@@ -1,12 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ChasingBehaviour : MonoBehaviour
 {
-	private Transform m_camera;
+	private CameraController m_cameraController;
+	private float m_displacement;
 
 	private void Start() {
-		m_camera = GameObject.FindGameObjectWithTag(Tags.MainCamera).transform;
+		m_cameraController = GameObject.FindGameObjectWithTag(Tags.MainCamera).GetComponent<CameraController>();
+		m_displacement = m_cameraController.GetComponent<BoxCollider2D>().bounds.center.x- m_cameraController.GetComponent<BoxCollider2D>().bounds.extents.x;
+		transform.position = new Vector3(m_displacement, transform.position.y, transform.position.z);
+	}
+
+	private void LateUpdate() {
+		transform.Translate(m_cameraController.m_velocity * Time.deltaTime);
+	}
+
+
+	private void OnTriggerEnter2D(Collider2D collision) {
+		if(collision.CompareTag(Tags.Player)) {
+			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+		}
 	}
 }
