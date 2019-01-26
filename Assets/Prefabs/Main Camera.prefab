@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06d8be0defd4ca44bb89ac2059f4b362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_velocity: {x: 3, y: 0}
+  m_velocity: {x: 7, y: 0}
   eventTriggered: 0
   m_delayChase: 0
   m_chasing: 0

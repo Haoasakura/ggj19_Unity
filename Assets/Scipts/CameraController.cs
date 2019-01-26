@@ -32,7 +32,7 @@ public class CameraController : MonoBehaviour
         if (!eventTriggered)
             transform.position = new Vector3(player.transform.position.x, transform.position.y, transform.position.z);
 
-        else
+        else if(m_chasing)
             transform.Translate(m_velocity*Time.deltaTime);
 	}
 
