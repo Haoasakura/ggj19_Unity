@@ -606,7 +606,7 @@ PrefabInstance:
     - target: {fileID: 1747760249216296601, guid: 336abb8c828173441a0f47dde2d405e1,
         type: 3}
       propertyPath: m_delayChase
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1747760249216296601, guid: 336abb8c828173441a0f47dde2d405e1,
         type: 3}
