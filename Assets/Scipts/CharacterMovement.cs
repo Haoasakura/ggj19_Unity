@@ -15,19 +15,31 @@ public class CharacterMovement : MonoBehaviour
 	[SerializeField]
 	private bool m_canJumpOnAir = true;
 
+	private bool m_rightDirection = true;
+
+
 	private Rigidbody2D m_rigidbody2D;
+	private CharacterRaycastController m_raycastController;
 
     void Start()
     {
 		m_rigidbody2D = GetComponent<Rigidbody2D>();
-
+		m_raycastController = GetComponent<CharacterRaycastController>();
 	}
 
 
 	private void Update() {
 		float horizontal = Input.GetAxis("Horizontal");
 
-		transform.Translate(new Vector3(horizontal, 0f, 0f) * m_speed * Time.deltaTime);
+		if(horizontal>=0)
+			m_rightDirection = true;
+		else
+			m_rightDirection = false;
+
+		if(m_raycastController.CanMoveInDirection(m_rightDirection)) {
+			transform.Translate(new Vector3(horizontal, 0f, 0f) * m_speed * Time.deltaTime);
+
+		}
 
 	}
 
