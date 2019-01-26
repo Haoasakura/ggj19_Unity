@@ -8,7 +8,12 @@ public class CameraController : MonoBehaviour
 	public Vector2 m_velocity;
     public bool eventTriggered = false;
 
-    private GameObject player;
+	[SerializeField]
+	private float m_delayChase = 0f;
+	[HideInInspector]
+	public bool m_chasing = false;
+
+	private GameObject player;
 
     private void Start()
     {
@@ -18,7 +23,10 @@ public class CameraController : MonoBehaviour
             eventTriggered = true;
 
         player = GameObject.FindGameObjectWithTag(Tags.Player);
-    }
+
+		if(!m_chasing)
+			StartCoroutine("WaitToChase");
+	}
 
     private void Update() {
         if (!eventTriggered)
@@ -26,6 +34,11 @@ public class CameraController : MonoBehaviour
 
         else
             transform.Translate(m_velocity*Time.deltaTime);
+	}
+
+	IEnumerator WaitToChase() {
+		yield return new WaitForSeconds(m_delayChase);
+		m_chasing = true;
 	}
 
 	private void OnTriggerExit2D(Collider2D collision) {

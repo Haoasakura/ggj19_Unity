@@ -97,6 +97,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_velocity: {x: 3, y: 0}
+  eventTriggered: 0
+  m_delayChase: 0
+  m_chasing: 0
 --- !u!61 &1747760249216296550
 BoxCollider2D:
   m_ObjectHideFlags: 0
