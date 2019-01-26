@@ -23,6 +23,7 @@ public class CharacterMovement : MonoBehaviour
 
 	private Rigidbody2D m_rigidbody2D;
 	private CharacterRaycastController m_raycastController;
+	private SpriteRenderer m_spriteRenderer;
 
     void Start()
     {
@@ -30,16 +31,21 @@ public class CharacterMovement : MonoBehaviour
 		m_initialJumpForce = m_jumpForce;
 		m_rigidbody2D = GetComponent<Rigidbody2D>();
 		m_raycastController = GetComponent<CharacterRaycastController>();
+		m_spriteRenderer = GetComponent<SpriteRenderer>();
 	}
 
 
 	private void Update() {
 		float horizontal = Input.GetAxis("Horizontal");
 
-		if(horizontal>=0)
+		if(horizontal >= 0) {
 			m_rightDirection = true;
-		else
+			m_spriteRenderer.flipX=false;
+		}
+		else {
 			m_rightDirection = false;
+			m_spriteRenderer.flipX = true;
+		}
 
 		if(m_raycastController.CanMoveInDirection(m_rightDirection)) {
 			transform.Translate(new Vector3(horizontal, 0f, 0f) * m_speed * Time.deltaTime);
