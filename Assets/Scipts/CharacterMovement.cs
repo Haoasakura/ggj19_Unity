@@ -4,36 +4,62 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-	public float speed=10f;
-	public float jumpForce = 5f;
+	[SerializeField]
+	private float speed=10f;
+	[SerializeField]
+	private float jumpForce = 5f;
+	[SerializeField]
+	private bool canDoubleJump = true;
 
+	[SerializeField]
 	private bool m_canJump = true;
-	private Rigidbody2D m_rigidbody2D;
+	[SerializeField]
+	private bool m_canJumpOnAir = true;
 
+	private Rigidbody2D m_rigidbody2D;
 
     void Start()
     {
 		m_rigidbody2D = GetComponent<Rigidbody2D>();
-    }
+
+	}
 
 
-    void FixedUpdate()
-    {
+	private void Update() {
 		float horizontal = Input.GetAxis("Horizontal");
 
-		m_rigidbody2D.AddForce(new Vector2(horizontal, 0f) * speed * Time.deltaTime);
+		transform.Translate(new Vector3(horizontal, 0f, 0f) * speed * Time.deltaTime);
 
-		if(Input.GetKeyDown(KeyCode.Space) && m_canJump) {
-			m_canJump = false;
-			m_rigidbody2D.AddForce(Vector2.up*jumpForce);
+	}
+
+
+	void FixedUpdate()
+    {
+
+		if(Input.GetKeyDown(KeyCode.Space) && (m_canJump || (!m_canJump && m_canJumpOnAir))) {
+			if(m_canJump)
+				m_canJump = false;
+			else {
+				m_canJumpOnAir = false;
+
+			}
+			m_rigidbody2D.velocity = new Vector2(m_rigidbody2D.velocity.x, 0f);
+			m_rigidbody2D.AddForce(Vector2.up*jumpForce,ForceMode2D.Impulse);
 		}
-
 
     }
 
-	private void OnCollisionEnter2D(Collision2D collision) {
+	/*private void OnCollisionEnter2D(Collision2D collision) {
 		if(collision.transform.CompareTag(Tags.Floor)) {
-			m_canJump = false;
+			m_canJump = true;
+			m_canJumpOnAir = true;
+		}
+	}*/
+
+	private void OnTriggerEnter2D(Collider2D collision) {
+		if(collision.transform.CompareTag(Tags.Floor)) {
+			m_canJump = true;
+			m_canJumpOnAir = true;
 		}
 	}
 }
