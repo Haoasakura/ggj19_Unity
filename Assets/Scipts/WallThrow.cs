@@ -19,7 +19,7 @@ public class WallThrow : MonoBehaviour
 		WaitForSeconds waitTime = new WaitForSeconds(m_throwDelay);
 		while(true) {
 
-			Instantiate(m_projectile,transform.position,Quaternion.identity);
+			GameObject projectile= Instantiate(m_projectile,transform.position,Quaternion.identity);
 
 			yield return waitTime;
 		}

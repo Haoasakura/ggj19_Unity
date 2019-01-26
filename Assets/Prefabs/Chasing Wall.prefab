@@ -91,7 +91,6 @@ GameObject:
   - component: {fileID: 8886386855551163635}
   - component: {fileID: 8886386855551163660}
   - component: {fileID: 8886386855551163634}
-  - component: {fileID: 1448406273}
   m_Layer: 8
   m_Name: Chasing Wall
   m_TagString: Untagged
@@ -200,18 +199,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad6c21c261ae9a145894b4dd2b8ee26f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1448406273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8886386855551163632}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c5676d5d86e50248acd0948564e8468, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_throwDelay: 1
-  m_projectile: {fileID: 8179640468475136486, guid: 0616d5e4db3effd439017c08eb1d54ee,
-    type: 3}
