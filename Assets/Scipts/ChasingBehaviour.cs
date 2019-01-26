@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class ChasingBehaviour : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	private Transform m_camera;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	private void Start() {
+		m_camera = GameObject.FindGameObjectWithTag(Tags.MainCamera).transform;
+	}
 }
