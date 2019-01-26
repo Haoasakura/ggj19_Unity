@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-	[SerializeField]
-	private float m_speed=10f;
-	[SerializeField]
-	private float m_jumpForce = 5f;
+
+	public float m_speed=10f;
+	public float m_jumpForce = 5f;
 	[SerializeField]
 	private bool m_canJump = true;
 	[SerializeField]
@@ -15,14 +14,20 @@ public class CharacterMovement : MonoBehaviour
 	[SerializeField]
 	private bool m_canJumpOnAir = true;
 
-	private bool m_rightDirection = true;
+	[HideInInspector]
+	public float m_initialSpeed;
+	[HideInInspector]
+	public float m_initialJumpForce;
 
+	private bool m_rightDirection = true;
 
 	private Rigidbody2D m_rigidbody2D;
 	private CharacterRaycastController m_raycastController;
 
     void Start()
     {
+		m_initialSpeed = m_speed;
+		m_initialJumpForce = m_jumpForce;
 		m_rigidbody2D = GetComponent<Rigidbody2D>();
 		m_raycastController = GetComponent<CharacterRaycastController>();
 	}
@@ -41,24 +46,25 @@ public class CharacterMovement : MonoBehaviour
 
 		}
 
-	}
+		m_canJump = m_raycastController.CanJump();
+		if(m_canJump)
+			m_canJumpOnAir = true;
 
-
-	void FixedUpdate()
-    {
-
-		if(Input.GetKeyDown(KeyCode.Space) && (m_canJump || (m_canDoubleJump && !m_canJump && m_canJumpOnAir))) {
-			if(m_canJump)
+		if(Input.GetKeyDown(KeyCode.Space) && (/*m_raycastController.CanJump()*/ m_canJump || (m_canDoubleJump && m_canJumpOnAir))) {
+			/*if(m_canJump)
 				m_canJump = false;
 			else {
 				m_canJumpOnAir = false;
 
-			}
+			}*/
+			if(!m_canJump/*m_raycastController.CanJump()*/ && m_canJumpOnAir)
+				m_canJumpOnAir = false;
+
 			m_rigidbody2D.velocity = new Vector2(m_rigidbody2D.velocity.x, 0f);
-			m_rigidbody2D.AddForce(Vector2.up*m_jumpForce,ForceMode2D.Impulse);
+			m_rigidbody2D.AddForce(Vector2.up * m_jumpForce, ForceMode2D.Impulse);
 		}
 
-    }
+	}
 
 	/*private void OnCollisionEnter2D(Collision2D collision) {
 		if(collision.transform.CompareTag(Tags.Floor)) {
@@ -68,9 +74,9 @@ public class CharacterMovement : MonoBehaviour
 	}*/
 
 	private void OnTriggerEnter2D(Collider2D collision) {
-		if(collision.transform.CompareTag(Tags.Floor)) {
+		/*if(collision.transform.CompareTag(Tags.Floor)) {
 			m_canJump = true;
 			m_canJumpOnAir = true;
-		}
+		}*/
 	}
 }
