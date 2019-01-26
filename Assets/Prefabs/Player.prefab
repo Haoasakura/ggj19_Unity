@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 10
-  m_jumpForce: 6
+  m_jumpForce: 8
   m_canJump: 1
   m_canDoubleJump: 1
   m_canJumpOnAir: 1
