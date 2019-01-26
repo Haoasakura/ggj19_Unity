@@ -1093,55 +1093,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1683366945}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &481998633 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4759465848074976857, guid: 290242894009cfa4bb895d5c790a6ced,
-    type: 3}
-  m_PrefabInstance: {fileID: 4759465847748430192}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &481998638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 481998633}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9683beed86120704d8e44f1ac21e55b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  jumpForce: 10
-  canDoubleJump: 1
-  m_canJump: 1
-  m_canJumpOnAir: 1
---- !u!61 &481998639
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 481998633}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.00069509447, y: -0.30120102}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
-    newSize: {x: 0.64, y: 0.64}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.6316587, y: 0.037597954}
-  m_EdgeRadius: 0
 --- !u!1001 &492501493
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1304,6 +1255,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1331,6 +1283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06d8be0defd4ca44bb89ac2059f4b362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_velocity: {x: 3, y: 0}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -1387,6 +1340,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &519420033
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.037366867, y: 0.037394524}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 24.407902, y: 10.049059}
+  m_EdgeRadius: 0
 --- !u!4 &528117763 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7842388347042808672, guid: 77a3c22949abcb14895798e66846433b,
@@ -5785,21 +5764,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4759465848074976861, guid: 290242894009cfa4bb895d5c790a6ced,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4759465848074976861, guid: 290242894009cfa4bb895d5c790a6ced,
-        type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4759465848074976861, guid: 290242894009cfa4bb895d5c790a6ced,
-        type: 3}
-      propertyPath: m_GravityScale
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 290242894009cfa4bb895d5c790a6ced, type: 3}

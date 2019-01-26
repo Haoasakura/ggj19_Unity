@@ -5,14 +5,13 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour
 {
 	[SerializeField]
-	private float speed=10f;
+	private float m_speed=10f;
 	[SerializeField]
-	private float jumpForce = 5f;
-	[SerializeField]
-	private bool canDoubleJump = true;
-
+	private float m_jumpForce = 5f;
 	[SerializeField]
 	private bool m_canJump = true;
+	[SerializeField]
+	private bool m_canDoubleJump = true;
 	[SerializeField]
 	private bool m_canJumpOnAir = true;
 
@@ -28,7 +27,7 @@ public class CharacterMovement : MonoBehaviour
 	private void Update() {
 		float horizontal = Input.GetAxis("Horizontal");
 
-		transform.Translate(new Vector3(horizontal, 0f, 0f) * speed * Time.deltaTime);
+		transform.Translate(new Vector3(horizontal, 0f, 0f) * m_speed * Time.deltaTime);
 
 	}
 
@@ -44,7 +43,7 @@ public class CharacterMovement : MonoBehaviour
 
 			}
 			m_rigidbody2D.velocity = new Vector2(m_rigidbody2D.velocity.x, 0f);
-			m_rigidbody2D.AddForce(Vector2.up*jumpForce,ForceMode2D.Impulse);
+			m_rigidbody2D.AddForce(Vector2.up*m_jumpForce,ForceMode2D.Impulse);
 		}
 
     }
