@@ -10,7 +10,7 @@ public class Projectile : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D collision) {
 		if(collision.CompareTag(Tags.Player)) {
-			collision.GetComponent<CharacterManager>().EatFood();
+			collision.GetComponent<CharacterManager>().Die();
 			Destroy(gameObject);
 		}
 	}

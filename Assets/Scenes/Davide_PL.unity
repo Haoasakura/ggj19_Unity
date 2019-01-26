@@ -6244,11 +6244,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1975273892686544893, guid: f4d30ada395f28c4287d1fb74594f67b,
-        type: 3}
-      propertyPath: m_throwDelay
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4d30ada395f28c4287d1fb74594f67b, type: 3}
 --- !u!1001 &1927680732
@@ -6798,6 +6793,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ObstacleShooter
+      objectReference: {fileID: 0}
+    - target: {fileID: 2773103904890417989, guid: 48b41289fbd3ebc45bc1062cf79e9ee8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2773103904890417987, guid: 48b41289fbd3ebc45bc1062cf79e9ee8,
         type: 3}
