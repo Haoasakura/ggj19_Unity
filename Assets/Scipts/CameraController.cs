@@ -17,8 +17,6 @@ public class CameraController : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("Scene name: " + SceneManager.GetActiveScene().name.Split('_')[1]);
-
         if ("RoT".Equals(SceneManager.GetActiveScene().name.Split('_')[1]))
             eventTriggered = true;
 

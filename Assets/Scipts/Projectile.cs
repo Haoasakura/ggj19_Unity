@@ -13,5 +13,9 @@ public class Projectile : MonoBehaviour
 			collision.GetComponent<CharacterManager>().Die();
 			Destroy(gameObject);
 		}
+
+		if(collision.CompareTag(Tags.Floor)) {
+			Destroy(gameObject);
+		}
 	}
 }

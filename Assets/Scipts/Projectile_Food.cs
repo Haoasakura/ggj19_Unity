@@ -44,9 +44,13 @@ public class Projectile_Food : Projectile
 		m_rigidbody2D.AddForce(globalVelocity*Random.Range(1.1f,1.5f),ForceMode2D.Impulse);
 
 	}
-	private new void OnTriggerEnter2D(Collider2D collision) {
+	private void OnTriggerEnter2D(Collider2D collision) {
 		if(collision.CompareTag(Tags.Player)) {
 			collision.GetComponent<CharacterManager>().EatFood();
+			Destroy(gameObject);
+		}
+
+		if(collision.CompareTag(Tags.Floor)) {
 			Destroy(gameObject);
 		}
 	}

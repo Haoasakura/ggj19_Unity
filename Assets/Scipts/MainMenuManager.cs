@@ -1,18 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	public GameObject m_creditsPanel;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	public void StartGame() {
+		Cursor.visible = false;
+		SceneManager.LoadScene("Hub_PL");
+	}
+
+	public void ExitGame() {
+		Application.Quit();
+	}
+
+	public void ToggleCredits() {
+		m_creditsPanel.SetActive(!m_creditsPanel.activeInHierarchy);
+	}
 }
