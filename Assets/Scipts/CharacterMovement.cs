@@ -47,7 +47,7 @@ public class CharacterMovement : MonoBehaviour
 	void FixedUpdate()
     {
 
-		if(Input.GetKeyDown(KeyCode.Space) && (m_canJump || (!m_canJump && m_canJumpOnAir))) {
+		if(Input.GetKeyDown(KeyCode.Space) && (m_canJump || (m_canDoubleJump && !m_canJump && m_canJumpOnAir))) {
 			if(m_canJump)
 				m_canJump = false;
 			else {
