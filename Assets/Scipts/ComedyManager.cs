@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ComedyManager : MonoBehaviour
 {
@@ -27,8 +28,17 @@ public class ComedyManager : MonoBehaviour
 	}
 	public void AddRepetition(Vector3 _position) {
 		int numberOfDeads = GameManager.instance.m_comedyData.NumberOfDeaths;
-		float x = Random.Range(_position.x-5f, _position.x+5f);
-		float y = Random.Range(m_bounds.min.y, m_bounds.max.y);
+		float x;
+		float y;
+		if(SceneManager.GetActiveScene().name.Equals("Level1_RoT")) {
+			x = Random.Range(_position.x - 5f, _position.x + 5f);
+			y = Random.Range(m_bounds.min.y, m_bounds.max.y);
+		}
+		else {
+			x = Random.Range(m_bounds.min.x, m_bounds.max.x);
+			y = Random.Range(_position.y - 5f, _position.y + 5f);
+
+		}
 		Vector3 finalPosition = new Vector3(x, y, 0f);
 
 		GameObject tmp = Instantiate(m_repetitionText, finalPosition, Quaternion.identity);
