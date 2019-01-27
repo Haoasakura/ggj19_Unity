@@ -10,8 +10,7 @@ public class TriggerEvent : MonoBehaviour
     {
         if (collision.CompareTag(Tags.Player))
         {
-			collision.GetComponent<CharacterManager>().Die();
-
-		}
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name.Split('_')[0] + "_RoT");
+        }
     }
 }
