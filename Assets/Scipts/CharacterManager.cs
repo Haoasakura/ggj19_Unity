@@ -42,7 +42,8 @@ public class CharacterManager : MonoBehaviour
 	}
 
 	public void Die() {
-		GameManager.instance.m_comedyData.NumberOfDeaths++;
+        if(GameManager.instance!=null)
+		    GameManager.instance.m_comedyData.NumberOfDeaths++;
 		GameObject comedyManager = GameObject.FindGameObjectWithTag(Tags.ComedyManager);
 		if(comedyManager != null)
 			comedyManager.GetComponent<ComedyManager>().AddRepetition(transform.position);

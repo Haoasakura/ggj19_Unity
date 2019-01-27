@@ -17,3 +17,5 @@ MonoBehaviour:
     value: 1
   - levelName: Level2_PL
     value: 1
+  - levelName: Level3_PL
+    value: 1
