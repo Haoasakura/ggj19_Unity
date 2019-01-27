@@ -1878,7 +1878,7 @@ PrefabInstance:
     - target: {fileID: 8942579201306188996, guid: c53cf3f35ec16304ea26f658b9845d7f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 75.98
+      value: 152.9
       objectReference: {fileID: 0}
     - target: {fileID: 8942579201306188996, guid: c53cf3f35ec16304ea26f658b9845d7f,
         type: 3}
@@ -1935,6 +1935,11 @@ PrefabInstance:
       propertyPath: text
       value: 
       objectReference: {fileID: 39579076}
+    - target: {fileID: 2978483838892072756, guid: c53cf3f35ec16304ea26f658b9845d7f,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8614501459572900329, guid: c53cf3f35ec16304ea26f658b9845d7f,
         type: 3}
       propertyPath: m_Canvas
