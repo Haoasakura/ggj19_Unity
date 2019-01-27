@@ -9,7 +9,8 @@ public class LevelSelectorPatform : MonoBehaviour
 	public BoxCollider2D m_boxCollider2DTrigger;
 
 	private void Start() {
-		m_boxCollider2DTrigger.enabled = HubData.Instance.ShouldBeActive(name);
+		m_boxCollider2DTrigger.enabled = GameManager.instance.m_hubData.ShouldBeActive(name);
+		//m_boxCollider2DTrigger.enabled = HubData.Instance.ShouldBeActive(name);
 		if(m_boxCollider2DTrigger.enabled) {
 			Color color = GetComponent<SpriteRenderer>().color;
 			color.a = 1.0f;

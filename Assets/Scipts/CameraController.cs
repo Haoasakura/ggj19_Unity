@@ -48,7 +48,7 @@ public class CameraController : MonoBehaviour
 
 	private void OnTriggerExit2D(Collider2D collision) {
 		if(collision.CompareTag(Tags.Player)) {
-			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+			collision.GetComponent<CharacterManager>().Die();
 		}
 	}
 }

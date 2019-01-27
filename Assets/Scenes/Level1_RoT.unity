@@ -1799,12 +1799,12 @@ PrefabInstance:
     - target: {fileID: 8942579201306188996, guid: c53cf3f35ec16304ea26f658b9845d7f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 76.45
+      value: 185.3
       objectReference: {fileID: 0}
     - target: {fileID: 8942579201306188996, guid: c53cf3f35ec16304ea26f658b9845d7f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.06
+      value: 11.8
       objectReference: {fileID: 0}
     - target: {fileID: 8942579201306188996, guid: c53cf3f35ec16304ea26f658b9845d7f,
         type: 3}
@@ -1856,6 +1856,22 @@ PrefabInstance:
       propertyPath: text
       value: 
       objectReference: {fileID: 39579076}
+    - target: {fileID: 8614501459572900329, guid: c53cf3f35ec16304ea26f658b9845d7f,
+        type: 3}
+      propertyPath: m_Canvas
+      value: 
+      objectReference: {fileID: 265285057}
+    - target: {fileID: 8614501459572900329, guid: c53cf3f35ec16304ea26f658b9845d7f,
+        type: 3}
+      propertyPath: m_canvas
+      value: 
+      objectReference: {fileID: 265285057}
+    - target: {fileID: 8614501459572900329, guid: c53cf3f35ec16304ea26f658b9845d7f,
+        type: 3}
+      propertyPath: m_repetitionText
+      value: 
+      objectReference: {fileID: 7060388890551420622, guid: 3a4542a552dd874429287549db88547b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c53cf3f35ec16304ea26f658b9845d7f, type: 3}
 --- !u!1001 &1773157069

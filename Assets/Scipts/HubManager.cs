@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class HubManager : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
 		GameManager.DisableGravity(false);
-    }
-
-    // Update is called once per frame
+		GameManager.instance.m_comedyData.ResetValues();
+		//ComedyData.Instance.ResetValues();
+	}
     void Update()
     {
 

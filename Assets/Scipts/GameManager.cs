@@ -4,10 +4,25 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    void Awake()
+
+	public static GameManager instance = null;
+
+	public HubData m_hubData;
+	public ComedyData m_comedyData;
+
+	void Awake()
     {
+
+		if(instance == null)
+			instance = this;
+		else if(instance != this)
+			Destroy(gameObject);
+
 		DontDestroyOnLoad(gameObject);
-		HubData.Instance.ResetValues();
+		m_hubData.ResetValues();
+		//m_comedyData.ResetValues();
+		//HubData.Instance.ResetValues();
+		//ComedyData.Instance.ResetValues();
 	}
 
     void Update()

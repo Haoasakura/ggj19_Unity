@@ -65,7 +65,7 @@ public class CharacterMovement : MonoBehaviour
 		if(m_canJump)
 			m_canJumpOnAir = true;
 
-		if(Input.GetKeyDown(KeyCode.Space) && m_canEverJump && (/*m_raycastController.CanJump()*/ m_canJump || m_canJumpOnAir)) {
+		if((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W)) && m_canEverJump && (/*m_raycastController.CanJump()*/ m_canJump || m_canJumpOnAir)) {
 			/*if(m_canJump)
 				m_canJump = false;
 			else {

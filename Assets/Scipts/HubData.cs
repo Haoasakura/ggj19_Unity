@@ -6,8 +6,8 @@ using UnityEngine;
 public class HubData : ScriptableObject
 {
 
-	private static HubData m_hubDataInstance;
-	public static HubData Instance { get { if(!m_hubDataInstance) m_hubDataInstance = Resources.FindObjectsOfTypeAll<HubData>()[0]; if(!m_hubDataInstance) m_hubDataInstance = CreateInstance<HubData>(); return m_hubDataInstance; } }
+	//private static HubData m_hubDataInstance;
+	//public static HubData Instance { get { if(!m_hubDataInstance) m_hubDataInstance = Resources.FindObjectsOfTypeAll<HubData>()[0]; if(!m_hubDataInstance) m_hubDataInstance = CreateInstance<HubData>(); return m_hubDataInstance; } }
 
 	[SerializeField]
 	List<SelectorData> m_levelPlatform;
