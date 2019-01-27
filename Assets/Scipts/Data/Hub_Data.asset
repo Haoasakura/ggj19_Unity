@@ -15,3 +15,5 @@ MonoBehaviour:
   m_levelPlatform:
   - levelName: Level1_PL
     value: 1
+  - levelName: Level2_PL
+    value: 1
