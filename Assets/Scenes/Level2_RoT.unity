@@ -5209,7 +5209,7 @@ PrefabInstance:
     - target: {fileID: 7074252758999690741, guid: c53cf3f35ec16304ea26f658b9845d7f,
         type: 3}
       propertyPath: m_Name
-      value: TriggerText
+      value: Comedy Manager
       objectReference: {fileID: 0}
     - target: {fileID: 8942579201306188996, guid: c53cf3f35ec16304ea26f658b9845d7f,
         type: 3}
