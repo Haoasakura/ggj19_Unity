@@ -359,19 +359,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4759465848074976861, guid: 290242894009cfa4bb895d5c790a6ced,
-        type: 3}
-      propertyPath: m_GravityScale
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 481998638, guid: 290242894009cfa4bb895d5c790a6ced, type: 3}
-      propertyPath: m_followTheCamera
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 481998638, guid: 290242894009cfa4bb895d5c790a6ced, type: 3}
-      propertyPath: m_canEverJump
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3316294594297721492, guid: 290242894009cfa4bb895d5c790a6ced,
         type: 3}
       propertyPath: m_Offset.x
@@ -386,6 +373,19 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 0.03930378
+      objectReference: {fileID: 0}
+    - target: {fileID: 4759465848074976861, guid: 290242894009cfa4bb895d5c790a6ced,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 481998638, guid: 290242894009cfa4bb895d5c790a6ced, type: 3}
+      propertyPath: m_followTheCamera
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 481998638, guid: 290242894009cfa4bb895d5c790a6ced, type: 3}
+      propertyPath: m_canEverJump
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 290242894009cfa4bb895d5c790a6ced, type: 3}
@@ -3038,11 +3038,6 @@ PrefabInstance:
       propertyPath: m_speed
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 4427892588885290300, guid: 7ae89c33aaa80fc40af5cf2185f553b0,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -9.66
-      objectReference: {fileID: 0}
     - target: {fileID: 4427892589371498156, guid: 7ae89c33aaa80fc40af5cf2185f553b0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3052,6 +3047,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427892588885290300, guid: 7ae89c33aaa80fc40af5cf2185f553b0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.66
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ae89c33aaa80fc40af5cf2185f553b0, type: 3}
@@ -5211,6 +5211,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Comedy Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 7074252758999690741, guid: c53cf3f35ec16304ea26f658b9845d7f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8942579201306188996, guid: c53cf3f35ec16304ea26f658b9845d7f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5772,11 +5777,6 @@ PrefabInstance:
       propertyPath: m_speed
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 4427892588885290300, guid: 7ae89c33aaa80fc40af5cf2185f553b0,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -9.66
-      objectReference: {fileID: 0}
     - target: {fileID: 4427892589371498156, guid: 7ae89c33aaa80fc40af5cf2185f553b0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5786,6 +5786,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427892588885290300, guid: 7ae89c33aaa80fc40af5cf2185f553b0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.66
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ae89c33aaa80fc40af5cf2185f553b0, type: 3}
