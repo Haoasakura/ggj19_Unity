@@ -27,6 +27,7 @@ public class CameraController : MonoBehaviour
 	}
 
     private void Update() {
+
         if (!eventTriggered)
             transform.position = new Vector3(player.transform.position.x, transform.position.y, transform.position.z);
 
