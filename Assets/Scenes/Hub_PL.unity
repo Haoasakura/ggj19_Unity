@@ -257,7 +257,7 @@ PrefabInstance:
     - target: {fileID: 842081926659025407, guid: 7a7838d5c5eca804d8383abfbbbd3caf,
         type: 3}
       propertyPath: m_Name
-      value: LevelSelector2
+      value: Level Selector2
       objectReference: {fileID: 0}
     - target: {fileID: 842081926659025402, guid: 7a7838d5c5eca804d8383abfbbbd3caf,
         type: 3}
@@ -354,6 +354,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 842081926659025406, guid: 7a7838d5c5eca804d8383abfbbbd3caf,
+        type: 3}
+      propertyPath: name
+      value: Level1_PL
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a7838d5c5eca804d8383abfbbbd3caf, type: 3}
