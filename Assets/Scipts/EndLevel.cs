@@ -8,7 +8,7 @@ public class EndLevel : MonoBehaviour
 	private void OnTriggerEnter2D(Collider2D collision) {
 		if(collision.CompareTag(Tags.Player)) {
 			if(SceneManager.GetActiveScene().buildIndex< SceneManager.sceneCountInBuildSettings) {
-				SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+				SceneManager.LoadScene("Hub_PL");
 			}
 
 		}
