@@ -10,8 +10,6 @@ public class CharacterMovement : MonoBehaviour
 	[SerializeField]
 	private bool m_canJump = true;
 	[SerializeField]
-	private bool m_canDoubleJump = true;
-	[SerializeField]
 	private bool m_canJumpOnAir = true;
 
 	[HideInInspector]
@@ -19,19 +17,26 @@ public class CharacterMovement : MonoBehaviour
 	[HideInInspector]
 	public float m_initialJumpForce;
 
+	public bool m_canEverJump = true;
+	public bool m_followTheCamera=false;
 	private bool m_rightDirection = true;
+	[HideInInspector]
+	public float m_initialGravityScale;
 
 	private Rigidbody2D m_rigidbody2D;
 	private CharacterRaycastController m_raycastController;
 	private SpriteRenderer m_spriteRenderer;
+	private CameraController m_cameraController;
 
-    void Start()
+    void Awake()
     {
 		m_initialSpeed = m_speed;
 		m_initialJumpForce = m_jumpForce;
 		m_rigidbody2D = GetComponent<Rigidbody2D>();
 		m_raycastController = GetComponent<CharacterRaycastController>();
 		m_spriteRenderer = GetComponent<SpriteRenderer>();
+		m_cameraController = GameObject.FindGameObjectWithTag(Tags.MainCamera).GetComponent<CameraController>();
+		m_initialGravityScale = m_rigidbody2D.gravityScale;
 	}
 
 
@@ -52,11 +57,15 @@ public class CharacterMovement : MonoBehaviour
 
 		}
 
+		if(m_followTheCamera) {
+			transform.Translate(m_cameraController.m_velocity * Time.deltaTime);
+		}
+
 		m_canJump = m_raycastController.CanJump();
 		if(m_canJump)
 			m_canJumpOnAir = true;
 
-		if(Input.GetKeyDown(KeyCode.Space) && (/*m_raycastController.CanJump()*/ m_canJump || (m_canDoubleJump && m_canJumpOnAir))) {
+		if(Input.GetKeyDown(KeyCode.Space) && m_canEverJump && (/*m_raycastController.CanJump()*/ m_canJump || m_canJumpOnAir)) {
 			/*if(m_canJump)
 				m_canJump = false;
 			else {

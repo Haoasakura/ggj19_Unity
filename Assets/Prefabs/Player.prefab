@@ -146,10 +146,12 @@ MonoBehaviour:
   m_speed: 10
   m_jumpForce: 8
   m_canJump: 1
-  m_canDoubleJump: 1
   m_canJumpOnAir: 1
   m_initialSpeed: 0
   m_initialJumpForce: 0
+  m_canEverJump: 1
+  m_followTheCamera: 0
+  m_initialGravityScale: 0
 --- !u!114 &481998640
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_levelPlatform:
   - levelName: Level1_PL
-    value: 0
+    value: 1
