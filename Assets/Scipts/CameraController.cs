@@ -8,6 +8,8 @@ public class CameraController : MonoBehaviour
 	public Vector2 m_velocity;
     public bool eventTriggered = false;
 
+    public GameObject toDestroy;
+
 	[SerializeField]
 	private float m_delayChase = 0f;
 	[HideInInspector]
@@ -38,6 +40,10 @@ public class CameraController : MonoBehaviour
 	IEnumerator WaitToChase() {
 		yield return new WaitForSeconds(m_delayChase);
 		m_chasing = true;
+        if (toDestroy != null) {
+            GameObject.Destroy(toDestroy);
+            GameManager.DisableGravity(true);
+        }
 	}
 
 	private void OnTriggerExit2D(Collider2D collision) {
