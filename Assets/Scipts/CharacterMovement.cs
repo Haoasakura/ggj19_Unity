@@ -81,12 +81,12 @@ public class CharacterMovement : MonoBehaviour
 
 	}
 
-	/*private void OnCollisionEnter2D(Collision2D collision) {
-		if(collision.transform.CompareTag(Tags.Floor)) {
+	private void OnCollisionEnter2D(Collision2D collision) {
+		/*if(collision.transform.CompareTag(Tags.Floor)) {
 			m_canJump = true;
 			m_canJumpOnAir = true;
-		}
-	}*/
+		}*/
+	}
 
 	private void OnTriggerEnter2D(Collider2D collision) {
 		/*if(collision.transform.CompareTag(Tags.Floor)) {

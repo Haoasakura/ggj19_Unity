@@ -25,22 +25,21 @@ public class Projectile_Food : Projectile
 		Vector2 target = m_player.position;
 
 
-		float dist = Vector2.Distance(pos, target);
+		float dist = Mathf.Abs(Vector2.Distance(pos, target));
 
 
 		float Vi = Mathf.Sqrt(dist * -Physics.gravity.y / (Mathf.Sin(Mathf.Deg2Rad * m_angle * 2)));
-		float Vy, Vz;
+		float Vx, Vy;
 
-		Vy = Vi * Mathf.Sin(Mathf.Deg2Rad * m_angle);
-		Vz = Vi * Mathf.Cos(Mathf.Deg2Rad * m_angle);
+		Vx = Vi * Mathf.Sin(Mathf.Deg2Rad * m_angle);
+		Vy = Vi * Mathf.Cos(Mathf.Deg2Rad * m_angle);
 
 
-		Vector2 localVelocity = new Vector2(Vy, Vz);
+		Vector2 localVelocity = new Vector2(Vx, Vy);
 
 
 		Vector3 globalVelocity = transform.TransformVector(localVelocity);
 
-		//m_rigidbody2D.velocity = globalVelocity;
 		m_rigidbody2D.AddForce(globalVelocity*Random.Range(1.1f,1.5f),ForceMode2D.Impulse);
 
 	}
