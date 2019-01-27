@@ -7,10 +7,15 @@ public class ChasingBehaviour : MonoBehaviour
 {
 	private CameraController m_cameraController;
 	private float m_displacement;
+	public bool m_rightDirection = true;
 
 	private void Start() {
 		m_cameraController = GameObject.FindGameObjectWithTag(Tags.MainCamera).GetComponent<CameraController>();
-		m_displacement = m_cameraController.GetComponent<BoxCollider2D>().bounds.center.x- m_cameraController.GetComponent<BoxCollider2D>().bounds.extents.x;
+		if(m_rightDirection)
+			m_displacement = m_cameraController.GetComponent<BoxCollider2D>().bounds.center.x - m_cameraController.GetComponent<BoxCollider2D>().bounds.extents.x;
+		else
+			m_displacement = m_cameraController.GetComponent<BoxCollider2D>().bounds.center.x + m_cameraController.GetComponent<BoxCollider2D>().bounds.extents.x;
+
 		transform.position = new Vector3(m_displacement, transform.position.y, transform.position.z);
 	}
 	private void LateUpdate() {
