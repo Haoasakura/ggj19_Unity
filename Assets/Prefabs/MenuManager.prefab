@@ -159,7 +159,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5278265343299006250}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.6521304}
   m_AnchorMax: {x: 1, y: 0.9131304}
@@ -304,7 +304,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1319567470
 RectTransform:
   m_ObjectHideFlags: 0
@@ -319,12 +319,12 @@ RectTransform:
   - {fileID: 693475144}
   - {fileID: 1991127495}
   m_Father: {fileID: 5278265343299006250}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.9, y: 0}
+  m_SizeDelta: {x: 176.2, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1319567472
 CanvasRenderer:
@@ -504,19 +504,19 @@ MonoBehaviour:
   m_margin: {x: -266.06854, y: -71.53729, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 0}
-    characterCount: 114
+    characterCount: 106
     spriteCount: 0
-    spaceCount: 17
-    wordCount: 15
+    spaceCount: 16
+    wordCount: 14
     linkCount: 0
     lineCount: 6
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -961,8 +961,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 5278265342307508414}
-  - {fileID: 1319567470}
   - {fileID: 839598254}
+  - {fileID: 1319567470}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
