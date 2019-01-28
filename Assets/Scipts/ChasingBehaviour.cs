@@ -24,8 +24,8 @@ public class ChasingBehaviour : MonoBehaviour
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision) {
-		if(collision.CompareTag(Tags.Player)) {
+		/*if(collision.CompareTag(Tags.Player)) {
 			collision.GetComponent<CharacterManager>().Die();
-		}
+		}*/
 	}
 }

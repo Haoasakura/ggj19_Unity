@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5045040242771628812}
   - component: {fileID: 8179640468475136487}
   m_Layer: 0
-  m_Name: Projectile
+  m_Name: Projectile_Food
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -131,4 +131,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a341625501a64b448c633438718f5a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToDestroy: 3
   m_timeToHit: 50
+  ball: {fileID: 0}
+  h: 0
+  gravity: -18
+  debugPath: 1
