@@ -36,7 +36,7 @@ public class Projectile_Food : Projectile
 		Vector3 checkedVelocity = CalculateLaunchData().initialVelocity;
 		if(float.IsNaN(checkedVelocity.x) || float.IsNaN(checkedVelocity.y))
 			checkedVelocity = new Vector3(0f, 0f, 0f);
-		ball.velocity = checkedVelocity * Random.Range(0.95f, 1.1f);
+		ball.velocity = checkedVelocity * Random.Range(1.1f, 1.4f);
 	}
 
 	LaunchData CalculateLaunchData() {

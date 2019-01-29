@@ -268,7 +268,9 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Triangles never liked squares!
 
-    Moreover, they''re cannibals ;)'
+    Moreover, they''re cannibals ;)
+
+    Avoid the food, they want you to get fat!'
 --- !u!222 &39579077
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4488,7 +4490,7 @@ PrefabInstance:
     - target: {fileID: 2753057993856307237, guid: dd18df26922b9304fb9a283c76946d0d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 185.11
+      value: 187.14
       objectReference: {fileID: 0}
     - target: {fileID: 2753057993856307237, guid: dd18df26922b9304fb9a283c76946d0d,
         type: 3}
@@ -4565,13 +4567,13 @@ PrefabInstance:
         type: 3}
       propertyPath: m_sprites.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: 5ba8237fa81808649889bae4209dcf78,
+      objectReference: {fileID: 21300000, guid: abd802b44a0c2e247ac892a30334aba4,
         type: 3}
     - target: {fileID: 1525636113324186068, guid: dd18df26922b9304fb9a283c76946d0d,
         type: 3}
       propertyPath: m_sprites.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: 39620c7a8dc82f64aa4fe431f6fa0c75,
+      objectReference: {fileID: 21300000, guid: 87cfc70b25b20144dbe0813b626d9449,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd18df26922b9304fb9a283c76946d0d, type: 3}
