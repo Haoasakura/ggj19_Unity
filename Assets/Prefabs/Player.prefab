@@ -183,4 +183,4 @@ MonoBehaviour:
   m_MinsizeAllowed: 0.01
   m_sizeDecrementAmount: 0.001
   m_sizeIncrementAmount: 0.1
-  m_moveDecrementAmount: 0.01
+  m_moveDecrementAmount: 1
